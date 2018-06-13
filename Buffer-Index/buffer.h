@@ -62,4 +62,28 @@ blockInfo*	findBlock(CString DB_Name);
  */
 void replace(fileInfo * m_fileInfo, blockInfo * m_blockInfo);
 
+/*
+ * Function: get_file_block
+ * Usage: get_file_block(database_name or file_name, table_name, file_type, blockNum);
+ * -----------------------------------------------------------------------------------
+ * This function yeilds the counterpart of the file in the buffer.
+ */
 
+blockInfo * get_file_block(CString DB_Name, CString Table_Name, int fileType, int blockNum);
+
+/*
+ * Function: closeDatabase
+ * Usage: closeDatabase(database_name, flag);
+ * ------------------------------------------
+ * Close every file by calling closeFile function.
+ */
+
+void closeDatabase(CString DB_Name, bool m_flag);
+
+/*
+ * Function: closeFile
+ * Usage: closeFile(database_name, file_name, file_type, flag);
+ * ------------------------------------------------------------
+ * To be implemented...
+ */
+void closeFile(CString DB_Name, CString m_fileName, int m_fileType, bool m_flag);
